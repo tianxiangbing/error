@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>@@title</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+	<div class="err-img err-403"></div>
+	<div class="err-info">@@context.content</div>
+	@@if (context.desc!=""){
+		<div class="err-desc">@@context.desc</div>
+	}
+	@@if (context.back!=""){
+	<div class="back">
+		<a href="javascript:history.back()">@@context.back</a>
+	</div>
+	}
+	<script>
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+	</script>
+</body>
+</html>
