@@ -5,19 +5,60 @@ $baseFontSize:      100px !default;
 @function pxToRem($px) {
   @return $px / $baseFontSize * 1rem;
 }
-$fontSize:pxToRem(22px);
+$fontSize:pxToRem(40px);
+$fontSize2:pxToRem(34px);
+$fontSize3:pxToRem(36px);
 body{
 	font-size:pxToRem(22px);
 }
 .err-img{
+	display:block;
+	margin:pxToRem(130px) auto 0 auto;
+	background-size:100% 100% !important;
+}
+.err-404{
+	width:pxToRem(538px);
+	height:pxToRem(444px);
+	background:url(imgs/404.png) no-repeat;
+}
+
+.err-403{
+	width:pxToRem(542px);
+	height:pxToRem(430px);
+	background:url(imgs/404.png) no-repeat;
+}
+
+.err-500{
 	width:pxToRem(400px);
 	height:pxToRem(346px);
-	display:block;
-	margin:0 auto;
+	background:url(imgs/404.png) no-repeat;
 }
-$errType :404,500,403;
-@each $type in $errType{
-	.err-#{$type}{
-		background:url(imgs/#{$type}.png) no-repeat;
+.err-info{
+	margin-top:pxToRem(100px);
+	line-height:pxToRem(60px);
+	font-size:$fontSize;
+	color:#4a4a4a;
+	text-align:center;
+}
+.err-desc{
+	line-height:pxToRem(60px);
+	text-align:center;
+	color:#9B9B9B;
+	font-size:$fontSize2;
+}
+.back{
+	a{
+		display:block;
+		margin:pxToRem(50px) auto;
+		width:pxToRem(164px);
+		height:pxToRem(76px);
+		line-height:pxToRem(76px);
+		text-align:center;
+		color:#FA565A;
+		border:1px solid #FA565A;
+		border-radius:pxToRem(6px);
+		font-size:$fontSize3;
+		text-decoration: none;
+		font-weight:bold;
 	}
 }
