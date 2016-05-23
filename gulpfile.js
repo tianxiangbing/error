@@ -25,7 +25,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
-  gulp.watch('./temp/**/*.html', ['fileinclude']);
+  gulp.watch(['./temp/**/*.html','./temp/**/*.htm'], ['fileinclude']);
 });
 
 gulp.task('fileinclude', function() {
@@ -34,7 +34,7 @@ gulp.task('fileinclude', function() {
       prefix: '@@',
       basepath: '@file'
     }))
-    .pipe(gulp.dest('./ub'))
-    .pipe(gulp.dest('./masheng'));
+    .pipe(gulp.dest('../error'))
+    //.pipe(gulp.dest('./masheng'));
 });
 gulp.task('default',['sass','fileinclude'])

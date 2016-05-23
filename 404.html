@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>@@title</title>
+	<title>404-抱歉，您访问的界面不存在！</title>
 	<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
 	<script>
 		var domain = document.domain;
@@ -25,15 +25,11 @@
 </head>
 <body>
 	<div class="err-img err-403"></div>
-	<div class="err-info">@@context.content</div>
-	@@if (context.desc!=""){
-		<div class="err-desc">@@context.desc</div>
-	}
-	@@if (context.back!=""){
-	<div class="back">
-		<a href="javascript:history.back()">@@context.back</a>
-	</div>
-	}
+	<div class="err-info">抱歉，您访问的界面不存在！</div>
+	
+		<div class="err-desc">请输入正确的地址</div>
+	
+	
 	<script>
 	var cw = Math.min( document.documentElement.clientWidth ,750);
 	document.documentElement.style.fontSize = cw / 7.5 + 'px';
